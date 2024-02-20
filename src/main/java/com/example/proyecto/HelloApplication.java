@@ -1,6 +1,7 @@
 package com.example.proyecto;
 
 import com.example.proyecto.vistas.Calculadora;
+import com.example.proyecto.vistas.Memorama;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,7 +16,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     private MenuBar mnbPrincipal;
     private Menu menParcial1, menParcial2, menSalir;
-    private MenuItem mitCalculadora, mitSalir;
+    private MenuItem mitCalculadora, mitSalir, mitMemorama;
     private BorderPane bdpPanel;
 
     @Override
@@ -39,8 +40,10 @@ public class HelloApplication extends Application {
         /* Menu primer parcial*/
         mitCalculadora = new MenuItem("Calculadora");
         mitCalculadora.setOnAction(event -> new Calculadora());
+        mitMemorama = new MenuItem("Memorama");
+        mitMemorama.setOnAction(event -> new Memorama());
         menParcial1 = new Menu("Primer Parcial");
-        menParcial1.getItems().addAll(mitCalculadora);
+        menParcial1.getItems().addAll(mitCalculadora, mitMemorama);
 
         /* Menu Segundo parcial*/
         menParcial2 = new Menu("Segundo Parcial");
