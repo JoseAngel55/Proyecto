@@ -30,8 +30,9 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(getClass().getResource("/Estilos/main.css").toString());
         stage.setTitle("Hello!");
         stage.setScene(scene);
-        stage.setMaximized(true);
         stage.show();
+        stage.setMaximized(true);
+        //stage.show();
 
         //new Calculadora();
     }
