@@ -1,0 +1,18 @@
+.root { -fx-background-color: green; }
+.label{
+    -fx-background-color: red;
+    -fx-padding: 8;
+}
+.button { -fx-background-color: #E6FD74;
+         -fx-border-color: #FFFFFF;
+         -fx-border-width: 1;
+         -fx-text-fill: #FF3399;
+         -fx-font-family: "Georgia";
+         -fx-font-style: italic;
+         -fx-font-size: 20px;
+         -fx-background-radius: 10 10 10 10;
+         -fx-border-radius: 10 10 10 10;
+}
+.button:hover{
+        -fx-background-color: #3a3a3a;
+}
