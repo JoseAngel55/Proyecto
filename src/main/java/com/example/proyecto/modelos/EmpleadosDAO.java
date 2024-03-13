@@ -63,7 +63,7 @@ public class EmpleadosDAO {
     }
 
     public void INSERTAR(){
-        String query = "INSERT INTO Empleado(numEmleado," +
+        String query = "INSERT INTO Empleado(numEmpleado," +
                 "rfcEmpleado,salario,telefono,direccion) " +
                 "VALUES('"+numEmpleado+"','"+rfcEmpleado+"',"+salario+",'"+telefono+"','"+direccion+"')";
         try {

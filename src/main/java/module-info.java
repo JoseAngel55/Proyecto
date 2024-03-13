@@ -5,6 +5,7 @@ module com.example.proyecto {
 
     opens com.example.proyecto to javafx.fxml;
     exports com.example.proyecto;
+    requires org.kordamp.bootstrapfx.core;
     requires java.sql;
     requires mysql.connector.j;
     opens com.example.proyecto.modelos;
