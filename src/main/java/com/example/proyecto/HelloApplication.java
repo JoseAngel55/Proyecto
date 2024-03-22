@@ -1,10 +1,8 @@
 package com.example.proyecto;
 
+import com.example.proyecto.componentes.Hilo;
 import com.example.proyecto.modelos.conexion;
-import com.example.proyecto.vistas.Calculadora;
-import com.example.proyecto.vistas.CuadroMagico;
-import com.example.proyecto.vistas.EmpleadoTaqueria;
-import com.example.proyecto.vistas.Memorama;
+import com.example.proyecto.vistas.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,7 +17,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     private MenuBar mnbPrincipal;
     private Menu menParcial1, menParcial2, menSalir;
-    private MenuItem mitCalculadora, mitSalir, mitMemorama, mitCuadroMagico, mitEmpleado;
+    private MenuItem mitCalculadora, mitSalir, mitMemorama, mitCuadroMagico, mitEmpleado, mitPista;
     private BorderPane bdpPanel;
 
     @Override
@@ -55,7 +53,10 @@ public class HelloApplication extends Application {
         menParcial1.getItems().addAll(mitCalculadora, mitMemorama, mitCuadroMagico,mitEmpleado);
 
         /* Menu Segundo parcial*/
+        mitPista = new MenuItem("Manejo de hilos");
+        mitPista.setOnAction(event -> new Pista());
         menParcial2 = new Menu("Segundo Parcial");
+        menParcial2.getItems().addAll(mitPista);
 
         /* Menu salir*/
         mitSalir = new MenuItem("Salir");
